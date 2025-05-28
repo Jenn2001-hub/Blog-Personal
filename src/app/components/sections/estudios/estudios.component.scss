@@ -1,0 +1,51 @@
+:host {
+  display: block;
+  padding: 1rem;
+
+  .section-content {
+    max-width: 1000px;
+    margin: 0 auto;
+
+    h2 {
+      color: #7e57c2;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    p-card {
+      margin-bottom: 2rem;
+
+      ::ng-deep .p-card-body {
+        padding: 2rem;
+      }
+
+      ::ng-deep .p-card-content {
+        p {
+          margin-bottom: 1rem;
+          line-height: 1.6;
+          text-align: justify;
+        }
+      }
+    }
+
+    .gallery-container {
+      margin-top: 2rem;
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  :host {
+    padding: 0.5rem;
+
+    .section-content {
+      p-card {
+        ::ng-deep .p-card-body {
+          padding: 1rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+<nav>
+  <div class="nav-buttons">
+    <button *ngFor="let tab of tabs" 
+            pButton 
+            type="button" 
+            [label]="tab.label" 
+            (click)="changeTab(tab.index)"
+            class="p-button-rounded p-button-outlined"></button>
+  </div>
+</nav>

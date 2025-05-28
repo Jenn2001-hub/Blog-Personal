@@ -1,0 +1,35 @@
+:host {
+  display: block;
+  background-color: #d1c4e9;
+  color: #4a148c;
+  padding: 1.5rem;
+  text-align: center;
+  margin-top: 2rem;
+
+  .footer-container {
+    max-width: 1000px;
+    margin: 0 auto;
+
+    p {
+      margin: 0.5rem 0;
+    }
+
+    a {
+      color: #4a148c;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+
+      &:hover {
+        color: #7b1fa2;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  :host {
+    padding: 1rem;
+  }
+}

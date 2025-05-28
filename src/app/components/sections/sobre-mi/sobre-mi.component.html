@@ -1,0 +1,32 @@
+<p-scrollPanel [style]="{width: '100%', height: '500px'}">
+  <div class="section-content">
+    <h2>Sobre Mí</h2>
+    <p-card>
+      <p>
+        Hola, soy Jennifer Alexandra Hincapie Bartolo, una persona amable y recochera, me gusta llevarme bien con todos y así poder crear buenos recuerdos en cada experiencia que vivió en mi día a día. 
+        En el momento no estoy trabajando y llevo casi un año viviendo gracias a mi emprendimiento de manualidades a crochet, el cual inicié como un hobby cuando decidí salirme de la empresa en la que estaba laborando.
+      </p>
+      <p>
+        Soy tranquila en general, me gusta el deporte y salir a comer; no me gusta mucho maquillarme, usar tacones y muy pocas veces me peino, soy más de estar al natural. 
+        Me gusta pensar que la vida es solo una y cada oportunidad que se presente de estudiar, conocer nuevas personas, nuevos lugares, adquirir nuevas habilidades o experiencias, hay que aprovecharlas al máximo, 
+        siempre estamos aprendiendo y enseñando, así que hay que aprovechar todo lo que se nos presente para mejorar y crecer como personas, tomando siempre lo bueno y no quedarnos en el pasado, en las cosas que hicimos mal o las que nos hicieron mal. 
+        El objetivo es seguir avanzando al ritmo de cada uno, dando un paso a la vez.
+      </p>
+      <p>
+        Entre mis metas para este año está empezar el gym, conseguir un nuevo trabajo y sentirme orgullosa de lo que voy logrando con sus tropiezos y aciertos.
+      </p>
+      <p>
+        Como dato curioso les comparto que nací el 20 de enero del 2000 en pleno eclipse de sol, por este motivo mi tía dice que estoy algo loca, no estoy segura de qué tan cierto sea, lo dejaré a criterio de cada uno.
+      </p>
+    </p-card>
+    
+    <div class="gallery-container">
+      <p-galleria [value]="images" [responsiveOptions]="responsiveOptions" [containerStyle]="{'max-width': '800px'}" 
+                  [numVisible]="1" [circular]="true" [fullScreen]="true" [showItemNavigators]="true" [showThumbnails]="false">
+        <ng-template pTemplate="item" let-item>
+          <img [src]="item.itemImageSrc" [alt]="item.alt" style="width: 100%; display: block;"/>
+        </ng-template>
+      </p-galleria>
+    </div>
+  </div>
+</p-scrollPanel>

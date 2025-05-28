@@ -1,0 +1,26 @@
+<p-scrollPanel [style]="{width: '100%', height: '500px'}">
+  <div class="section-content">
+    <h2>Mis Hobbies</h2>
+    <p-card>
+      <p>
+        Me encanta leer novelas románticas y de fantasía, también algunos libros de crecimiento personal. 
+        No soy muy amante a escuchar música, pero cuando lo hago escucho algo tranquilo, nada muy estruendoso. Hago manualidades a crochet, peluches, llaveros y estoy intentando hacer prendas.
+      </p>
+      <p>
+        También disfruto ver series los fines de semana, salir a comer con mis amigos o familia, salir a la ciclovía, hacer deporte cuando puedo, ir de caminata y tomar fotografías.
+      </p>
+      <p>
+        La oportunidad y posibilidad que tengo de hacer las cosas que me gustan es algo que agradezco y valoro cada día.
+      </p>
+    </p-card>
+    
+    <div class="gallery-container">
+      <p-galleria [value]="images" [responsiveOptions]="responsiveOptions" [containerStyle]="{'max-width': '800px'}" 
+                  [numVisible]="3" [circular]="true" [fullScreen]="true" [showItemNavigators]="true" [showThumbnails]="false">
+        <ng-template pTemplate="item" let-item>
+          <img [src]="item.itemImageSrc" [alt]="item.alt" style="width: 100%; display: block;"/>
+        </ng-template>
+      </p-galleria>
+    </div>
+  </div>
+</p-scrollPanel>

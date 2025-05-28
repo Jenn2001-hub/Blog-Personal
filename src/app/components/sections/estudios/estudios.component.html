@@ -1,0 +1,23 @@
+<p-scrollPanel [style]="{width: '100%', height: '500px'}">
+  <div class="section-content">
+    <h2>Mis Estudios</h2>
+    <p-card>
+      <p>
+        Realmente he tenido la fortuna de poder estudiar varias cosas que me han llamado la atención y aprender de todo un poco.
+      </p>
+      <p>
+        Soy Técnica en Asistencia Administrativa, Técnica en sistemas, Bachiller Técnico en Contabilidad y Finanzas, y actualmente estudio Tecnología en Desarrollo de Software. 
+        Hice un curso en fotografía y uno en comida italiana. Amo aprender cosas nuevas, ya que todo lo que uno aprende siempre le sirve.
+      </p>
+    </p-card>
+    
+    <div class="gallery-container">
+      <p-galleria [value]="images" [responsiveOptions]="responsiveOptions" [containerStyle]="{'max-width': '800px'}" 
+                  [numVisible]="1" [circular]="true" [fullScreen]="true" [showItemNavigators]="true" [showThumbnails]="false">
+        <ng-template pTemplate="item" let-item>
+          <img [src]="item.itemImageSrc" [alt]="item.alt" style="width: 100%; display: block;"/>
+        </ng-template>
+      </p-galleria>
+    </div>
+  </div>
+</p-scrollPanel>
