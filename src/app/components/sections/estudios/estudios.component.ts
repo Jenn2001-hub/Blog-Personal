@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-estudios',
-  templateUrl: './estudios.component.html',
-  styleUrls: ['./estudios.component.scss']
+    selector: 'app-estudios',
+    templateUrl: './estudios.component.html',
+    styleUrls: ['./estudios.component.scss'],
+    standalone: false
 })
 export class EstudiosComponent {
   images = [
