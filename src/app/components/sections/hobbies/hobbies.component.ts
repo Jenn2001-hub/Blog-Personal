@@ -14,21 +14,15 @@ export class HobbiesComponent {
   images = [
     {
       itemImageSrc: 'assets/images/hobbies1.jpg',
-      thumbnailImageSrc: 'assets/images/hobbies1.jpg',
-      alt: 'Leyendo un libro',
-      title: 'Leyendo un libro'
+      thumbnailImageSrc: 'assets/images/hobbies1-thumb.jpg',
     },
     {
       itemImageSrc: 'assets/images/hobbies2.jpg',
-      thumbnailImageSrc: 'assets/images/hobbies2.jpg',
-      alt: 'Manualidades',
-      title: 'Manualidades'
+      thumbnailImageSrc: 'assets/images/hobbies2-thumb.jpg',
     },
     {
       itemImageSrc: 'assets/images/hobbies3.jpg',
-      thumbnailImageSrc: 'assets/images/hobbies3.jpg',
-      alt: 'Ciclovía',
-      title: 'Ciclovía'
+      thumbnailImageSrc: 'assets/images/hobbies3-thumb.jpg',
     }
   ];
 

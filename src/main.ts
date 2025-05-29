@@ -1,16 +1,11 @@
 import { bootstrapApplication } from '@angular/platform-browser';
-import { provideRouter } from '@angular/router';
-import { provideAnimations } from '@angular/platform-browser/animations';
-import { provideHttpClient } from '@angular/common/http';
-
+import { appConfig } from './app/app.config';
 import { AppComponent } from './app/app.component';
-import { routes } from './app/app.routes';
 
+// Importaciones de estilos de PrimeNG
+import "primeng/resources/themes/lara-light-purple/theme.css";
+import "primeng/resources/primeng.css";
+import "primeicons/primeicons.css";
 
-bootstrapApplication(AppComponent, {
-  providers: [
-    provideRouter(routes),
-    provideAnimations(),
-    provideHttpClient()
-  ]
-}).catch(err => console.error(err));
+bootstrapApplication(AppComponent, appConfig)
+  .catch((err) => console.error(err));

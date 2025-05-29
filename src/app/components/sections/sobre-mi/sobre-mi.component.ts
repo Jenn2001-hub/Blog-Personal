@@ -14,8 +14,7 @@ export class SobreMiComponent {
   images = [
     {
       itemImageSrc: 'assets/images/sobremi.jpg',
-      thumbnailImageSrc: 'assets/images/sobremi.jpg',
-      title: 'Sobre mí'
+      thumbnailImageSrc: 'assets/images/sobremi-thumb.jpg',
     }
   ];
 

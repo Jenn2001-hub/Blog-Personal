@@ -14,9 +14,7 @@ export class EstudiosComponent {
   images = [
     {
       itemImageSrc: 'assets/images/estudios.jpg',
-      thumbnailImageSrc: 'assets/images/estudios.jpg',
-      alt: 'Graduación',
-      title: 'Mis estudios'
+      thumbnailImageSrc: 'assets/images/estudios-thumb.jpg',
     }
   ];
 

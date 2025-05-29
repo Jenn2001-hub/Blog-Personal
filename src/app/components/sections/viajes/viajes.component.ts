@@ -14,21 +14,15 @@ export class ViajesComponent {
   images = [
     {
       itemImageSrc: 'assets/images/viajes1.jpg',
-      thumbnailImageSrc: 'assets/images/viajes1.jpg',
-      alt: 'Paisaje montañoso',
-      title: 'Paisaje montañoso'
+      thumbnailImageSrc: 'assets/images/viajes1-thumb.jpg',
     },
     {
       itemImageSrc: 'assets/images/viajes2.jpg',
-      thumbnailImageSrc: 'assets/images/viajes2.jpg',
-      alt: 'Pueblo mágico',
-      title: 'Pueblo mágico'
+      thumbnailImageSrc: 'assets/images/viajes2-thumb.jpg',
     },
     {
       itemImageSrc: 'assets/images/viajes3.jpg',
-      thumbnailImageSrc: 'assets/images/viajes3.jpg',
-      alt: 'Aventura',
-      title: 'Aventura'
+      thumbnailImageSrc: 'assets/images/viajes3-thumb.jpg',
     }
   ];
 

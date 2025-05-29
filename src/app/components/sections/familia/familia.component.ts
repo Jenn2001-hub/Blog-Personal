@@ -14,21 +14,15 @@ export class FamiliaComponent {
   images = [
     {
       itemImageSrc: 'assets/images/familia1.jpg',
-      thumbnailImageSrc: 'assets/images/familia1.jpg',
-      alt: 'Con mamá',
-      title: 'Con mi mamá'
+      thumbnailImageSrc: 'assets/images/familia1-thumb.jpg',
     },
     {
       itemImageSrc: 'assets/images/familia2.jpg',
-      thumbnailImageSrc: 'assets/images/familia2.jpg',
-      alt: 'Hermanas',
-      title: 'Con mis hermanas'
+      thumbnailImageSrc: 'assets/images/familia2-thumb.jpg',
     },
     {
       itemImageSrc: 'assets/images/familia3.jpg',
-      thumbnailImageSrc: 'assets/images/familia3.jpg',
-      alt: 'Gatitos',
-      title: 'Mis gatitos'
+      thumbnailImageSrc: 'assets/images/familia3-thumb.jpg',
     }
   ];
 
