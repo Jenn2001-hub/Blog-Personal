@@ -1,32 +1,39 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { GalleriaModule } from 'primeng/galleria';
+import { ButtonModule } from 'primeng/button';
 
 @Component({
-    selector: 'app-estudios',
-    templateUrl: './estudios.component.html',
-    styleUrls: ['./estudios.component.scss'],
-    standalone: false
+  selector: 'app-estudios',
+  standalone: true,
+  imports: [CommonModule, GalleriaModule, ButtonModule],
+  templateUrl: './estudios.component.html',
+  styleUrls: ['./estudios.component.scss']
 })
 export class EstudiosComponent {
   images = [
     {
       itemImageSrc: 'assets/images/estudios.jpg',
       thumbnailImageSrc: 'assets/images/estudios.jpg',
-      alt: 'Graduación'
+      alt: 'Graduación',
+      title: 'Mis estudios'
     }
   ];
 
-    responsiveOptions: any[] = [
+  responsiveOptions: any[] = [
     {
       breakpoint: '1024px',
-      numVisible: 3
+      numVisible: 1
     },
     {
       breakpoint: '768px',
-      numVisible: 2
+      numVisible: 1
     },
     {
       breakpoint: '560px',
       numVisible: 1
     }
   ];
+
+  activeIndex: number = 0;
 }

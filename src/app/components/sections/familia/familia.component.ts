@@ -1,27 +1,34 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { GalleriaModule } from 'primeng/galleria';
+import { ButtonModule } from 'primeng/button';
 
 @Component({
-    selector: 'app-familia',
-    templateUrl: './familia.component.html',
-    styleUrls: ['./familia.component.scss'],
-    standalone: false
+  selector: 'app-familia',
+  standalone: true,
+  imports: [CommonModule, GalleriaModule, ButtonModule],
+  templateUrl: './familia.component.html',
+  styleUrls: ['./familia.component.scss']
 })
 export class FamiliaComponent {
   images = [
     {
       itemImageSrc: 'assets/images/familia1.jpg',
       thumbnailImageSrc: 'assets/images/familia1.jpg',
-      alt: 'Con mamá'
+      alt: 'Con mamá',
+      title: 'Con mi mamá'
     },
     {
       itemImageSrc: 'assets/images/familia2.jpg',
       thumbnailImageSrc: 'assets/images/familia2.jpg',
-      alt: 'Hermanas'
+      alt: 'Hermanas',
+      title: 'Con mis hermanas'
     },
     {
       itemImageSrc: 'assets/images/familia3.jpg',
       thumbnailImageSrc: 'assets/images/familia3.jpg',
-      alt: 'Gatitos'
+      alt: 'Gatitos',
+      title: 'Mis gatitos'
     }
   ];
 
@@ -39,4 +46,6 @@ export class FamiliaComponent {
       numVisible: 1
     }
   ];
+
+  activeIndex: number = 0;
 }

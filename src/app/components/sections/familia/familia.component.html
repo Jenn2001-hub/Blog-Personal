@@ -1,24 +1,33 @@
-<p-scrollPanel [style]="{width: '100%', height: '500px'}">
-  <div class="section-content">
+<div class="section-container">
+  <div class="text-content">
     <h2>Mi Familia</h2>
-    <p-card>
-      <p>
-        Mi familia es mi mayor tesoro. Siempre han sido mi apoyo incondicional y mi fuerza. 
-        Siempre hemos sido solo mi mamá, mis dos hermanas y yo, ellas han estado ahí en cada paso, decisión y logro que he tenido.
-      </p>
-      <p>
-        También tengo dos gatitos que tienen 7 y 4 años, son una pieza muy importante en mi vida, siempre están ahí conmigo, me encanta dormir con ellos, verlos dormir y mimarlos. 
-        La mejor parte de mi día es poder llegar a mi casa ver a mi mamá y a mis gatitos.
-      </p>
-    </p-card>
+    <p>Mi familia es mi mayor tesoro. Siempre han sido mi apoyo incondicional y mi fuerza. 
+      Siempre hemos sido solo mi mamá, mis dos hermanas y yo, ellas han estado ahí en cada paso, decisión y logro que he tenido.</p>
+    <p>También tengo dos gatitos que tienen 7 y 4 años, son una pieza muy importante en mi vida, siempre están ahí conmigo, me encanta dormir con ellos, verlos dormir y mimarlos. 
+      La mejor parte de mi día es poder llegar a mi casa ver a mi mamá y a mis gatitos.</p>
     
-    <div class="gallery-container">
-      <p-galleria [value]="images" [responsiveOptions]="responsiveOptions" [containerStyle]="{'max-width': '800px'}" 
-                  [numVisible]="3" [circular]="true" [fullScreen]="true" [showItemNavigators]="true" [showThumbnails]="false">
+    <div class="gallery">
+      <p-galleria 
+        [value]="images" 
+        [(activeIndex)]="activeIndex" 
+        [responsiveOptions]="responsiveOptions" 
+        [containerStyle]="{'max-width': '800px', 'margin': '0 auto'}"
+        [circular]="true" 
+        [fullScreen]="true" 
+        [showItemNavigators]="true" 
+        [showThumbnails]="false"
+        [showIndicators]="true">
+        
         <ng-template pTemplate="item" let-item>
-          <img [src]="item.itemImageSrc" [alt]="item.alt" style="width: 100%; display: block;"/>
+          <img [src]="item.itemImageSrc" [alt]="item.alt" style="width: 100%; max-height: 500px; object-fit: contain;"/>
+        </ng-template>
+        
+        <ng-template pTemplate="thumbnail" let-item>
+          <div class="grid grid-nogutter justify-content-center">
+            <img [src]="item.thumbnailImageSrc" [alt]="item.alt" style="display: block; width: 60px; height: 40px; object-fit: cover;"/>
+          </div>
         </ng-template>
       </p-galleria>
     </div>
   </div>
-</p-scrollPanel>
+</div>

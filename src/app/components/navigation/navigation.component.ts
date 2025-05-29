@@ -1,23 +1,52 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { MenuItem } from 'primeng/api';
+import { TabMenuModule } from 'primeng/tabmenu';
+import { Router } from '@angular/router';
 
 @Component({
-    selector: 'app-navigation',
-    templateUrl: './navigation.component.html',
-    styleUrls: ['./navigation.component.scss'],
-    standalone: false
+  selector: 'app-navigation',
+  standalone: true,
+  imports: [CommonModule, TabMenuModule],
+  templateUrl: './navigation.component.html',
+  styleUrls: ['./navigation.component.scss']
 })
 export class NavigationComponent {
-  @Output() tabChange = new EventEmitter<number>();
-  
-  tabs = [
-    { label: 'Sobre Mí', index: 0 },
-    { label: 'Mis Hobbies', index: 1 },
-    { label: 'Mis Estudios', index: 2 },
-    { label: 'Mis Viajes', index: 3 },
-    { label: 'Mi Familia', index: 4 }
-  ];
+  items: MenuItem[] = [];
 
-  changeTab(index: number) {
-    this.tabChange.emit(index);
+  constructor(private router: Router) {}
+
+  ngOnInit() {
+    this.items = [
+      { 
+        label: 'Sobre Mí', 
+        icon: 'pi pi-user', 
+        command: () => this.navigateTo('/sobre-mi') 
+      },
+      { 
+        label: 'Mis Hobbies', 
+        icon: 'pi pi-heart', 
+        command: () => this.navigateTo('/hobbies') 
+      },
+      { 
+        label: 'Mis Estudios', 
+        icon: 'pi pi-book', 
+        command: () => this.navigateTo('/estudios') 
+      },
+      { 
+        label: 'Mis Viajes', 
+        icon: 'pi pi-map', 
+        command: () => this.navigateTo('/viajes') 
+      },
+      { 
+        label: 'Mi Familia', 
+        icon: 'pi pi-users', 
+        command: () => this.navigateTo('/familia') 
+      }
+    ];
+  }
+
+  navigateTo(route: string) {
+    this.router.navigate([route]);
   }
 }

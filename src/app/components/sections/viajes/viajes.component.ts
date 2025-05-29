@@ -1,27 +1,34 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { GalleriaModule } from 'primeng/galleria';
+import { ButtonModule } from 'primeng/button';
 
 @Component({
-    selector: 'app-viajes',
-    templateUrl: './viajes.component.html',
-    styleUrls: ['./viajes.component.scss'],
-    standalone: false
+  selector: 'app-viajes',
+  standalone: true,
+  imports: [CommonModule, GalleriaModule, ButtonModule],
+  templateUrl: './viajes.component.html',
+  styleUrls: ['./viajes.component.scss']
 })
 export class ViajesComponent {
   images = [
     {
       itemImageSrc: 'assets/images/viajes1.jpg',
       thumbnailImageSrc: 'assets/images/viajes1.jpg',
-      alt: 'Paisaje montañoso'
+      alt: 'Paisaje montañoso',
+      title: 'Paisaje montañoso'
     },
     {
       itemImageSrc: 'assets/images/viajes2.jpg',
       thumbnailImageSrc: 'assets/images/viajes2.jpg',
-      alt: 'Pueblo mágico'
+      alt: 'Pueblo mágico',
+      title: 'Pueblo mágico'
     },
     {
       itemImageSrc: 'assets/images/viajes3.jpg',
       thumbnailImageSrc: 'assets/images/viajes3.jpg',
-      alt: 'Aventura'
+      alt: 'Aventura',
+      title: 'Aventura'
     }
   ];
 
@@ -39,4 +46,6 @@ export class ViajesComponent {
       numVisible: 1
     }
   ];
+
+  activeIndex: number = 0;
 }

@@ -1,17 +1,21 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { GalleriaModule } from 'primeng/galleria';
+import { ButtonModule } from 'primeng/button';
 
 @Component({
-    selector: 'app-sobre-mi',
-    templateUrl: './sobre-mi.component.html',
-    styleUrls: ['./sobre-mi.component.scss'],
-    standalone: false
+  selector: 'app-sobre-mi',
+  standalone: true,
+  imports: [CommonModule, GalleriaModule, ButtonModule],
+  templateUrl: './sobre-mi.component.html',
+  styleUrls: ['./sobre-mi.component.scss']
 })
 export class SobreMiComponent {
   images = [
     {
       itemImageSrc: 'assets/images/sobremi.jpg',
       thumbnailImageSrc: 'assets/images/sobremi.jpg',
-      alt: 'Jennifer sonriendo'
+      title: 'Sobre mí'
     }
   ];
 
@@ -29,4 +33,6 @@ export class SobreMiComponent {
       numVisible: 1
     }
   ];
+
+  activeIndex: number = 0;
 }

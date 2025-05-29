@@ -1,10 +1,3 @@
-<nav>
-  <div class="nav-buttons">
-    <button *ngFor="let tab of tabs" 
-            pButton 
-            type="button" 
-            [label]="tab.label" 
-            (click)="changeTab(tab.index)"
-            class="p-button-rounded p-button-outlined"></button>
-  </div>
-</nav>
+<div class="navigation-container">
+  <p-tabMenu [model]="items" [activeItem]="items[0]"></p-tabMenu>
+</div>

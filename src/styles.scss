@@ -1,54 +1,196 @@
-/* Estilos globales */
+@import 'primeicons/primeicons.css';
+@import 'primeng/resources/themes/lara-light-purple/theme.css';
+@import 'primeng/resources/primeng.min.css';
+/* Estilos globales mejorados */
 body {
   font-family: 'Georgia', serif;
-  background-color: #fafafa;
-  color: #4a4a4a;
+  background-color: #f8f9fa;
+  color: #495057;
   margin: 0;
-  padding: 0;
   line-height: 1.6;
 }
 
-/* Estilos para p-tabView */
-::ng-deep .p-tabview {
-  .p-tabview-nav {
-    background: #e1bee7;
-    border: none;
+/* Estilo para las secciones */
+.section-container {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  margin: 2rem auto;
+  max-width: 1200px;
+  padding: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 
-    li {
-      .p-tabview-nav-link {
-        background: #9575cd;
-        color: white;
-        border: none;
-        margin: 0 0.25rem;
-        border-radius: 25px;
-        transition: all 0.3s;
+  &:hover {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+  }
 
-        &:not(.p-disabled):hover {
-          background: #7e57c2;
-        }
-      }
+  h2 {
+    color: #7e57c2;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 0.5rem;
 
-      &.p-highlight .p-tabview-nav-link {
-        background: #7e57c2;
-      }
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(90deg, #7e57c2, #b39ddb);
     }
   }
 
-  .p-tabview-panels {
-    background: #f3e5f5;
-    padding: 1rem;
+  p {
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
   }
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  ::ng-deep .p-tabview {
-    .p-tabview-nav {
-      li {
-        .p-tabview-nav-link {
-          padding: 0.5rem 1rem;
-          font-size: 0.9rem;
+/* Galería mejorada */
+.gallery {
+  margin-top: 2rem;
+  border-radius: 8px;
+  overflow: hidden;
+  
+  .p-galleria {
+    border: 8px solid white;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    
+    .p-galleria-item-wrapper {
+      border-radius: 4px;
+    }
+    
+    img {
+      border-radius: 4px;
+      transition: transform 0.3s ease;
+      
+      &:hover {
+        transform: scale(1.02);
+      }
+    }
+  }
+}
+
+/* Header mejorado */
+.portada {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 4rem 1rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(126, 87, 194, 0.8), rgba(179, 157, 219, 0.8));
+  }
+
+  .content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+
+    h1 {
+      font-size: 3.5rem;
+      margin: 0;
+      font-weight: 700;
+      letter-spacing: 1px;
+      
+      &:first-child {
+        margin-bottom: 0.5rem;
+      }
+    }
+
+    p {
+      font-size: 1.5rem;
+      font-style: italic;
+      margin-top: 1rem;
+    }
+  }
+}
+
+/* Botones y navegación mejorados */
+:host ::ng-deep {
+  .p-tabmenu {
+    .p-tabmenu-nav {
+      background: transparent;
+      border: none;
+      
+      .p-menuitem-link {
+        background: rgba(255, 255, 255, 0.9);
+        border: none;
+        color: #7e57c2;
+        margin: 0 0.5rem;
+        border-radius: 50px;
+        padding: 0.75rem 1.5rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        
+        &:hover {
+          background: #7e57c2;
+          color: white;
+          transform: translateY(-3px);
+          box-shadow: 0 6px 12px rgba(126, 87, 194, 0.3);
         }
+        
+        .p-menuitem-icon {
+          margin-right: 0.5rem;
+        }
+      }
+      
+      .p-highlight .p-menuitem-link {
+        background: #7e57c2;
+        color: white;
+      }
+    }
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .portada .content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .section-container {
+    padding: 1.5rem;
+    margin: 1rem;
+    
+    h2 {
+      font-size: 1.8rem;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .portada {
+    height: 300px;
+    
+    .content {
+      h1 {
+        font-size: 2rem;
+      }
+      
+      p {
+        font-size: 1.2rem;
       }
     }
   }

@@ -1,24 +1,10 @@
 <div class="app-container">
   <app-header></app-header>
-  <app-navigation (tabChange)="onTabChange($event)"></app-navigation>
+  <app-navigation></app-navigation>
   
-  <p-tabView [(activeIndex)]="activeTabIndex" [scrollable]="true">
-    <p-tabPanel header="Sobre Mí">
-      <app-sobre-mi></app-sobre-mi>
-    </p-tabPanel>
-    <p-tabPanel header="Mis Hobbies">
-      <app-hobbies></app-hobbies>
-    </p-tabPanel>
-    <p-tabPanel header="Mis Estudios">
-      <app-estudios></app-estudios>
-    </p-tabPanel>
-    <p-tabPanel header="Mis Viajes">
-      <app-viajes></app-viajes>
-    </p-tabPanel>
-    <p-tabPanel header="Mi Familia">
-      <app-familia></app-familia>
-    </p-tabPanel>
-  </p-tabView>
+  <main>
+    <router-outlet></router-outlet>
+  </main>
   
   <app-footer></app-footer>
 </div>

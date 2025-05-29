@@ -1,27 +1,34 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { GalleriaModule } from 'primeng/galleria';
+import { ButtonModule } from 'primeng/button';
 
 @Component({
-    selector: 'app-hobbies',
-    templateUrl: './hobbies.component.html',
-    styleUrls: ['./hobbies.component.scss'],
-    standalone: false
+  selector: 'app-hobbies',
+  standalone: true,
+  imports: [CommonModule, GalleriaModule, ButtonModule],
+  templateUrl: './hobbies.component.html',
+  styleUrls: ['./hobbies.component.scss']
 })
 export class HobbiesComponent {
   images = [
     {
       itemImageSrc: 'assets/images/hobbies1.jpg',
       thumbnailImageSrc: 'assets/images/hobbies1.jpg',
-      alt: 'Leyendo un libro'
+      alt: 'Leyendo un libro',
+      title: 'Leyendo un libro'
     },
     {
       itemImageSrc: 'assets/images/hobbies2.jpg',
       thumbnailImageSrc: 'assets/images/hobbies2.jpg',
-      alt: 'Manualidades'
+      alt: 'Manualidades',
+      title: 'Manualidades'
     },
     {
       itemImageSrc: 'assets/images/hobbies3.jpg',
       thumbnailImageSrc: 'assets/images/hobbies3.jpg',
-      alt: 'Ciclovía'
+      alt: 'Ciclovía',
+      title: 'Ciclovía'
     }
   ];
 
@@ -39,4 +46,6 @@ export class HobbiesComponent {
       numVisible: 1
     }
   ];
+
+  activeIndex: number = 0;
 }

@@ -1,28 +1,33 @@
-<p-scrollPanel [style]="{width: '100%', height: '500px'}">
-  <div class="section-content">
+<div class="section-container">
+  <div class="text-content">
     <h2>Mis Viajes</h2>
-    <p-card>
-      <p>
-        Viajar es una de mis formas favoritas de recargar energías. Me encanta la idea de conocer paisajes verdes, pueblos mágicos y descubrir nuevas culturas. Realmente no he hecho demasiados viajes, pero los pocos que he hecho han sido muy importantes y mágicos para mí.
-      </p>
-      <p>
-        Viajo dos veces al año a Quinchía, es el pueblo donde nací, allí me quedo en la finca de mis tíos, estar allá siempre es tranquilizador y me recarga de energía, en este lugar casi no hay señal y la casa más cercana queda a 10 minutos de distancia, es mi lugar favorito tanto porque paso buenos ratos con mi familia como porque me desconecto realmente de todo.
-      </p>
-      <p>
-        Hace más o menos un año viajé a Norcasia con una amiga, fue un viaje muy significativo porque fue el primero que pagué sola, una experiencia increíble, conocí muchos lugares hermosos y bajamos nadando por el río de la miel. También a principio de año viajé a Medellín con mi amiga, fuimos a ver los alumbrados navideños, fue un viaje rápido, pero ya que no conocía fuimos a muchos lugares turísticos como la comuna 13, el pueblito cafetero, el teleférico, entre otros.
-      </p>
-      <p>
-        Mi deseo es seguir haciendo viajes pequeños y grandes, conocer nuevos lugares y culturas.
-      </p>
-    </p-card>
+    <p>Viajar es una de mis formas favoritas de recargar energías. Me encanta la idea de conocer paisajes verdes, pueblos mágicos y descubrir nuevas culturas. Realmente no he hecho demasiados viajes, pero los pocos que he hecho han sido muy importantes y mágicos para mí.</p>
+    <p>Viajo dos veces al año a Quinchía, es el pueblo donde nací, allí me quedo en la finca de mis tíos, estar allá siempre es tranquilizador y me recarga de energía, en este lugar casi no hay señal y la casa más cercana queda a 10 minutos de distancia, es mi lugar favorito tanto porque paso buenos ratos con mi familia como porque me desconecto realmente de todo.</p>
+    <p>Hace más o menos un año viajé a Norcasia con una amiga, fue un viaje muy significativo porque fue el primero que pagué sola, una experiencia increíble, conocí muchos lugares hermosos y bajamos nadando por el río de la miel. También a principio de año viajé a Medellín con mi amiga, fuimos a ver los alumbrados navideños, fue un viaje rápido, pero ya que no conocía fuimos a muchos lugares turísticos como la comuna 13, el pueblito cafetero, el teleférico, entre otros.</p>
+    <p>Mi deseo es seguir haciendo viajes pequeños y grandes, conocer nuevos lugares y culturas.</p>
     
-    <div class="gallery-container">
-      <p-galleria [value]="images" [responsiveOptions]="responsiveOptions" [containerStyle]="{'max-width': '800px'}" 
-                  [numVisible]="3" [circular]="true" [fullScreen]="true" [showItemNavigators]="true" [showThumbnails]="false">
+    <div class="gallery">
+      <p-galleria 
+        [value]="images" 
+        [(activeIndex)]="activeIndex" 
+        [responsiveOptions]="responsiveOptions" 
+        [containerStyle]="{'max-width': '800px', 'margin': '0 auto'}"
+        [circular]="true" 
+        [fullScreen]="true" 
+        [showItemNavigators]="true" 
+        [showThumbnails]="false"
+        [showIndicators]="true">
+        
         <ng-template pTemplate="item" let-item>
-          <img [src]="item.itemImageSrc" [alt]="item.alt" style="width: 100%; display: block;"/>
+          <img [src]="item.itemImageSrc" [alt]="item.alt" style="width: 100%; max-height: 500px; object-fit: contain;"/>
+        </ng-template>
+        
+        <ng-template pTemplate="thumbnail" let-item>
+          <div class="grid grid-nogutter justify-content-center">
+            <img [src]="item.thumbnailImageSrc" [alt]="item.alt" style="display: block; width: 60px; height: 40px; object-fit: cover;"/>
+          </div>
         </ng-template>
       </p-galleria>
     </div>
   </div>
-</p-scrollPanel>
+</div>
