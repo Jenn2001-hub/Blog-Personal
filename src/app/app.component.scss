@@ -1,18 +1,19 @@
+//boton flotante para subir rapidamente la pagina
 .custom-scrolltop {
   width: 2.5rem;
   height: 2.5rem;
-  border-radius: 50%;
-  background-color: #7e57c2 !important;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease;
+  border-radius: 50%; //botno redondo
+  background-color: #7e57c2; //color fondo del boton
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); //sombra
+  transition: all 0.3s ease; //animacion cuando pasa el cursor
   
   &:hover {
-    background-color: #5e35b1 !important;
-    transform: scale(1.1);
+    background-color: #5e35b1; //cambia a dolor purpura
+    transform: scale(1.5); //aumenta el tamaño
   }
   
   .pi {
-    font-size: 1.2rem;
-    color: white;
+    font-size: 1.5rem; //tamaño del icono
+    color: white; //color icono
   }
 }

@@ -1,69 +1,84 @@
 .portada {
   position: relative;
-  background-size: cover;
-  background-position: center;
-  color: #ffffff;
-  padding: 30px 10px;
-  text-align: center;
-  height: 300px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  background-size: cover; //La imagen cubre todo el contenedor
+  background-position: center; //Centra la imagen
+  color: #ffffff; //Texto de la portada
+  padding: 30px 10px; // Estacio en el contenedor
+  text-align: center; // Centrar el texto de forma horizontal
+  height: 300px; //Altura 
+  display: flex; //Organizar el contenido
+  flex-direction: column; // Los elementos se ponen en columna
+  justify-content: center; // centra verticalmente todo el contenido
+  align-items: center; // centra horizontalmente el contenido
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 
+  //fondo sobre la imagen
   .overlay {
-    position: absolute;
+    position: absolute; 
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background: linear-gradient(135deg);
+    background-color: rgba(0, 0, 0, 0.5); //Filtro oscuro semi-transparente para resaltar el sexto
   }
 
   .content {
-    position: relative;
-    z-index: 1;
+    position: relative; //Permite poner algo sobre el overlay
+    z-index: 1; //Asegura estar sobre el overlay
+    max-width: 800px;
+    margin: 0 auto;
 
+    //Titulo
     h1 {
       margin: 0;
-      font-size: 3.8rem;
-      font-weight: bold;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      font-size: 3.8rem; //tamaño titulo
+      font-weight: bold; //texto negrita
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); //sombre del texto
+      letter-spacing: 1px;
+      
+      &:first-child {
+        margin-bottom: 0.5rem;
+      }
+
     }
 
+    //Subtitulo
     p {
-      margin: 10px 0 0;
-      font-size: 1.5rem;
-      font-style: italic;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      margin: 10px 0 0; //margen, solo usa margen superior
+      font-size: 1.5rem; //tamaño texto
+      font-style: italic; //texto cursiva
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); //sombra
     }
   }
 }
 
+//Ajuste para pantallas medianas
 @media (max-width: 768px) {
   .portada {
-    height: 300px;
+    height: 300px; //mantiene la misma altura
 
     .content h1 {
-      font-size: 2.8rem;
+      font-size: 2.8rem; //reduce tamaño titulo
     }
 
     .content p {
-      font-size: 1.4rem;
+      font-size: 1.4rem; // reduce tamaño subtitulo
     }
   }
 }
 
+//Ajuste a pantallas pequeñas
 @media (max-width: 480px) {
   .portada {
-    height: 300px;
+    height: 300px; //mantiene la misma altura
 
     .content h1 {
-      font-size: 1.8rem;
+      font-size: 1.8rem; //reduce tamaño titulo
     }
 
     .content p {
-      font-size: 1rem;
+      font-size: 1rem; // reduce tamaño subtitulo
     }
   }
 }

@@ -1,21 +1,22 @@
 footer {
-  background-color: #d1c4e9;
-  color: #4a148c;
+  background-color: #d1c4e9; //color de fondo
+  color: #4a148c; //color del texto
   padding: 15px;
-  text-align: center;
-  margin-top: 20px;
-
+  text-align: center; //centrar el texto
+  margin-top: 20px; // espacio de arriba para separar del otro contenedor
+  
+  //margenes del contenedor
   p {
     margin: 0.5rem 0;
   }
-
+  //estilos de los enlaces
   a {
-    color: #4a148c;
-    text-decoration: none;
-    font-weight: bold;
+    color: #4a148c; //color de los enlaces
+    text-decoration: none; // quita el subrayado de los enlaces
+    font-weight: bold; //agrega negrilla al texto del enlace
 
     &:hover {
-      text-decoration: underline;
+      text-decoration: underline; // sobresale cuando se pasa el mouse
     }
   }
 }
