@@ -21,5 +21,5 @@ import { ScrollTopModule } from 'primeng/scrolltop'; // Importa el módulo
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'personal-blog';
+  title = 'blog-personal';
 }
