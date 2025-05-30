@@ -15,25 +15,13 @@
         [value]="images" 
         [(activeIndex)]="activeIndex"
         [responsiveOptions]="responsiveOptions" 
-        [containerStyle]="{'max-width': '800px'}"
+        [containerStyle]="{'max-width': '600px', 'margin': '0 auto'}"
         [circular]="true"
         [showItemNavigators]="true"
-        [showThumbnails]="true"
-        [showIndicators]="true"
-        [thumbnailsPosition]="'bottom'"
-        [autoPlay]="true"
-        [transitionInterval]="3000">
+        [showThumbnails]="true">
         
         <ng-template pTemplate="item" let-item>
-          <div class="image-container">
-            <img [src]="item.itemImageSrc" [alt]="item.alt" class="main-image"/>
-          </div>
-        </ng-template>
-        
-        <ng-template pTemplate="thumbnail" let-item>
-          <div class="thumbnail-container">
-            <img [src]="item.thumbnailImageSrc" [alt]="item.alt" class="thumbnail-image"/>
-          </div>
+          <img [src]="item.itemImageSrc" [alt]="item.alt" style="width: 100%; max-height: 500px; object-fit: contain;"/>
         </ng-template>
       </p-galleria>
     </div>

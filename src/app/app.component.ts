@@ -4,6 +4,7 @@ import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './components/header/header.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { ScrollTopModule } from 'primeng/scrolltop'; // Importa el módulo
 
 @Component({
   selector: 'app-root',
@@ -13,7 +14,8 @@ import { FooterComponent } from './components/footer/footer.component';
     RouterOutlet,
     HeaderComponent,
     NavigationComponent,
-    FooterComponent
+    FooterComponent,
+    ScrollTopModule
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
